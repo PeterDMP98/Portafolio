@@ -1,0 +1,195 @@
+:root {
+    --title: rgb(5,30,155);
+    --letras:rgb(222, 219, 231)  ;
+    --font-letras-home: 3.8rem;
+    --tipo-letra-link: 'Caveat', cursive;
+    --backg-header:rgb(5,30,155);
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+color: var(--letras);
+font-family: 'Itim', cursive;
+font-family: 'Merriweather', serif;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    background: rgb(7,181,228);
+    background: linear-gradient(180deg, rgba(7,181,228,1) 0%, rgba(36,34,177,1) 61%, rgba(18,15,198,1) 100%);
+    background-repeat: no-repeat;
+    
+}
+
+/*header*/
+header{
+    height: 100%;
+    background-color: var(--backg-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -1000px;
+    top: 0;
+    width: 12rem;
+    transition: left 0.7;
+}
+
+.header-menu{
+    left: 0;
+}
+
+.fa-circle-xmark{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.fa-ellipsis-vertical{
+    color: #fff;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.content__link{
+    display: flex;
+    flex-direction: column;
+}
+
+.content__link *{
+    font-size: 1.7rem;
+    transition: font-size 1s;
+}
+
+#home:hover{
+    font-size: 2.2rem;
+}
+
+#about:hover{
+    font-size: 2.2rem;
+}
+
+#contact:hover{
+    font-size: 2.2rem;
+}
+
+/*main*/
+h2{
+    color: var(--title);
+    font-size: 2.5rem;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portafolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1.5rem 1rem;
+}
+
+.content__link-porfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 400px;
+}
+
+
+.content__link-porfolio > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: rgba(65, 62, 250, 0.4) 0px 2px 4px, rgba(154, 152, 247, 0.3) 0px 7px 13px -3px, rgba(113, 122, 250, 0.2) 0px -3px 0px inset;
+}
+
+.store{
+    max-width: 700px;
+}
+
+.content__link-porfolio > * p{
+    text-align: center;
+}
+
+.content__link-porfolio > * a > img{
+    border-radius: 0.5rem;
+}
+
+.option2{
+    max-width: 700px;
+}
+
+.option3{
+    max-width: 700px;
+} 
+
+
+
+/*Galaxy fold*/
+@media (max-width:280px) {
+
+    main{
+        background-repeat: no-repeat;
+        width: 280px;
+    }
+}
+
+@media (max-width:360px) {
+
+    .fa-ellipsis-vertical{
+        left: 20px;
+        rotate: 90deg;
+    }
+}
+
+/*Escritorio*/
+@media (min-width:900px) {
+    header{
+        left:0;
+    }
+    
+    .header-menu{
+        display: none;
+    }
+    
+    .fa-circle-xmark{
+        display: none;
+    }
+
+    main{
+
+        display: flex;
+        margin-left:12rem;
+
+    
+    }
+}
+
